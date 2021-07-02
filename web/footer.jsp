@@ -15,12 +15,12 @@
                  <h3>Proyecto #1 Programación de Software 2</h3>
                  <p>Pofesor: Juan Antonio Zamora</p>
                  <div class="app-logo">
-                     <img src="../image/fisc.png">
-                     <img src="../image/utp.png">
+                     <img src="image/fisc.png">
+                     <img src="image/utp.png">
                  </div>
              </div>
              <div class="footer-col-2">
-                 <img src="../image/logo.png">
+                 <img src="image/logo.png">
                  <p>SEM 1 2021</p>
              </div>
              <div class="footer-col-3">

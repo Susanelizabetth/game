@@ -28,22 +28,22 @@
     <!-- ----------------------------------------------------NAV---------------------------------------------- -->
     <nav>    
         <div class="logo">
-                <a href="PaginaPrincipal.html"><img src="../image/logo.png"></a>
+                <a href="PaginaPrincipal.html"><img src="image/logo.png"></a>
             </div>
             <div class="nav-items">
-                <li><a href="PaginaPrincipal.html">Inicio</a></li>
-                <li><a href="Busqueda.html">Juegos</a></li>
-                <li><a href="AcercaProyecto.html">Conócenos</a></li>
-                <li><a href="contacto.html">Contactos</a></li>
-                <li><a href="RegistroUsuario.html">Regístrate</a></li>
-                <li><a href="InicioSesion.html">Inicia Sesión</a></li>
+                <li><a href="index.jsp">Inicio</a></li>
+                <li><a href="Busqueda.jsp">Juegos</a></li>
+                <li><a href="AcercaProyecto.jsp">Conócenos</a></li>
+                <li><a href="contacto.jsp">Contactos</a></li>
+                <li><a href="RegistroUsuario.jsp">Regístrate</a></li>
+                <li><a href="InicioSesion.jsp">Inicia Sesión</a></li>
             </div>
             <form >
                 <input type="search" class="search-data" placeholder="Search" required>
                 <button type="submit" class="fas fa-search"></button>
             </form>
             <div class="boton">
-                <button><a href="Perfil.html"><i class="fas fa-user"></i></a></button>
+                <button><a href="Perfil.jsp"><i class="fas fa-user"></i></a></button>
                 <div class="bell-not">
                     <button class="btn"><i class="fas fa-bell"></i></button>
                     <div class="not-content" id="desplegable">
@@ -83,7 +83,7 @@
                     </div>
                 </div>
                 
-                <button><a href="cart-view.html"><i class="fas fa-cart-plus"></i></a></button>
+                <button><a href="cart-view.jsp"><i class="fas fa-cart-plus"></i></a></button>
             </div>
     </nav>
 <!-- --------------------------------------------------------TERMINA NAV-------------------------------------------------- -->
