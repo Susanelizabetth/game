@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Sumana:wght@700&display=swap");
+.Personadiv {
+  align-items: center;
+  background-color: #f2f2f2;
+  display: flex;
+  font-family: "Merriweather", serif;
+  flex-wrap: wrap;
+  justify-content:center;
+  height: fit-content;
+  margin: 0;
+  
+}
+
+.person {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+.container {
+  border-radius: 50%;
+  height: 200px;
+  transform: scale(0.48);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 220px;
+  
+
+}
+.container:after {
+  background-color: #f2f2f2;
+  height: 10px;
+  position: absolute;
+  top: 390px;
+  width: 100%;
+}
+.container:hover {
+  transform: scale(0.54);
+}
+.container-inner {
+  position: relative;
+  transform-origin: 50%;
+  top: -150px;
+}
+.circle {
+  background-color: #e4e8ec;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 220px;
+  left: 10px;
+  pointer-events: none;
+  position: absolute;
+  top: 210px;
+  width: 220px;
+ 
+}
+
+.divider {
+  background-color:#5D6EDB;
+  height: 1px;
+  width: 90px;
+}
+.name {
+  color: #404245;
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+}
+.title {
+  color: #6e6e6e;
+  font-family: arial;
+  font-size: 10px;
+  font-style: italic;
+  margin-top: 4px;
+}

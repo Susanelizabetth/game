@@ -1,0 +1,99 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.cart-view{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 200vh;
+    height: 68vh
+}
+
+.cart-view h1{
+    width: 37em;
+}
+
+.elementos{
+    display: grid;
+    grid-template-columns: 10% 35% 5% 14% 29%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #aaa;
+    margin: 1px;
+}
+
+.elementos img{
+    height: 70px;
+    
+}
+
+.elementos a{
+    color: #6e50ff;
+    text-decoration: none;
+}
+
+#cantidad{
+    width: 53px;
+    height: 30%;
+}
+
+.cart-view .boton-cart{
+    height: 32px;
+    background-color: #6e50ff;
+    color: white;
+    border: 1px;
+    border-radius: 10px;
+    width: 60%;
+    margin: 10px;
+}
+
+.price-item{
+    text-align: right;
+    margin: 0;
+    font-size: small;
+}
+
+.antes{
+    text-decoration: line-through;
+    color: darkgray;
+}
+
+.total-car{
+    display: flex;
+    justify-content: flex-end;
+}
+.total, .total-car p{
+    margin-right: 45px;
+    font-size: larger;
+    align-items: center;
+    text-decoration: bold;
+}
+
+
+.shop-continue{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.opcions .boton-cart{
+    width: 148px;
+}
+.opcions{
+    display: flex;
+    justify-content: space-between;
+}
+.shop-continue img{
+    height: 16px;
+    margin-right: 20px;
+    align-self: center;
+}
+
+.boton-cart:hover{
+    background-color: azure;
+    color: #6e50ff;
+    border:1px solid #6e50ff
+}

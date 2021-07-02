@@ -1,0 +1,121 @@
+
+/*-------------SIDEBAR------------------*/
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f7f7f7;
+    position: absolute;
+    top: 90px;
+    /*height: 100%;*/
+    overflow: auto;
+  }
+
+  /* -------LINKS---- */
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  /* --------ACTIVAR-------*/
+  .sidebar a.active {
+    background-color: #5D6EDB;
+    color: white;
+  }
+  .sidebar a.active1 {
+    background-color: #323864;
+    color: white;
+  }
+  
+  /* ---------HOVER---------*/
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+
+  /*--------------Busqueda--------------*/
+
+.container-b{
+    max-width: 1080px;
+    position: relative;
+    left: 20%;
+    top: 0px;
+    animation: expand .8s ease forwards;
+    transition: all .8s ease;
+    /*padding-left: 25px;
+    padding-right: 25px;
+    /*position:absolute;
+    left: 300px;
+    top: 200px;*/
+  }
+  
+  .title{
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    left:27%;
+    line-height: 70px;
+    color: #555;
+    font-size:  25px;
+  
+  }
+  .title::after{
+    content: '';
+    background: #5D6EDB;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 42%;
+  
+
+  
+  }
+  .row-b{
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0px;
+    margin-left: 0px;
+    position:relative;
+    left: 0px;
+    transition: transform 0.5s;
+    transform: translateY(-5px);
+
+    
+  }
+  .col{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    transition: transform 0.5s;
+  }
+  .col img{
+    height: 250px;
+    width: 200px;
+
+  }
+  
+  .col h4{
+    color: #555;
+    font-weight: normal;
+  }
+  .col:hover{
+    transform: translateY(-5px);
+  }
+
+  .rating .fas , .far{
+    color: #279728;
+  
+  }
+  .col p{
+    font-size: 14px;
+  }
+  /*---------Termina busqueda-----------------*/
