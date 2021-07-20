@@ -3,11 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/susan/OneDrive/Documentos/NetBeansProjects/Gamep/src/java/Datos/Conexion.java</file>
-            <file>file:/C:/Users/susan/OneDrive/Documentos/NetBeansProjects/Gamep/src/java/Entidades/Producto.java</file>
-            <file>file:/C:/Users/susan/OneDrive/Documentos/NetBeansProjects/Gamep/web/nav.jsp</file>
-            <file>file:/C:/Users/susan/OneDrive/Documentos/NetBeansProjects/Gamep/web/Busqueda.jsp</file>
-            <file>file:/C:/Users/susan/OneDrive/Documentos/NetBeansProjects/Gamep/src/java/Datos/ProcesoProducto.java</file>
+            <file>file:/C:/Users/susan/OneDrive/Documentos/NetBeansProjects/Gamep/web/process/registrar.jsp</file>
+            <file>file:/C:/Users/susan/OneDrive/Documentos/NetBeansProjects/Gamep/src/java/Datos/ProcesoPersona.java</file>
+            <file>file:/C:/Users/susan/OneDrive/Documentos/NetBeansProjects/Gamep/web/RegistroUsuario.jsp</file>
+            <file>file:/C:/Users/susan/OneDrive/Documentos/NetBeansProjects/Gamep/src/java/Entidades/Persona.java</file>
+            <file>file:/C:/Users/susan/OneDrive/Documentos/NetBeansProjects/Gamep/src/java/Entidades/Usuario.java</file>
+            <file>file:/C:/Users/susan/OneDrive/Documentos/NetBeansProjects/Gamep/src/java/Datos/ProcesoUsuario.java</file>
         </group>
     </open-files>
 </project-private>

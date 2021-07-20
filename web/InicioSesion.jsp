@@ -24,10 +24,10 @@
                 <p id="p2">+ Ofertas y juegos exclusivos que te harán reír de la competencia</p>
                 
                 <h1>Inicio de Sesión</h1>
-                <form class="login-form">
-                    <input type="text" placeholder="Nombre de Usuario"/>
-                    <input type="password" placeholder="contaseña"/>
-                    <button>Iniciar Sesión</button>
+                <form action="process/iniciar.jsp" method="post" class="login-form">
+                    <input type="text" name="username" placeholder="Nombre de Usuario"/>
+                    <input type="password" name="password" placeholder="contaseña"/>
+                    <button type="submit">Iniciar Sesión</button>
                     <p class="message"><a href="#">Has olvidado tu contraseña?</a></p>
                     <p class="message">Aun no posees una cuenta? <a href="#">Registrate</a></p>
                 </form>
