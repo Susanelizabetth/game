@@ -17,7 +17,7 @@ public class Conexion {
     public Connection OpenDb(){
         try{
             Class.forName("org.mariadb.jdbc.Driver");
-            return DriverManager.getConnection("jdbc:mariadb://database-1.cdrf6m4wg1wx.us-west-2.rds.amazonaws.com/GamePlus", "admin", "abcd1234");
+            return DriverManager.getConnection("jdbc:mariadb://127.0.0.1/gameplus", "susana", "1234");
         }
         catch(ClassNotFoundException cnfe){
             System.out.println("Error en la libreria mariadb");
