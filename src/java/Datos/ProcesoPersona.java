@@ -24,7 +24,7 @@ public class ProcesoPersona {
         try{
             
             Statement smtm = _cn.createStatement();
-            String query = "INSERT INTO Persona(nombre,apellido,correo,ciudad,cel,fechaNac)";
+            String query = "INSERT INTO persona(nombre,apellido,correo,ciudad,cel,fechaNac)";
             query += "VALUES('"+persona.getNombre()+"','"+persona.getApellido()+"','"+persona.getCorreo()+"','"+persona.getCiudad()+"','"+persona.getTelefono()+"','"+persona.getFechaNacimiento()+"')";
         
             resultado = smtm.executeUpdate(query);

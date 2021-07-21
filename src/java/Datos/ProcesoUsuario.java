@@ -7,8 +7,10 @@ package Datos;
 
 import Entidades.Persona;
 import Entidades.Usuario;
+import static java.lang.System.out;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
@@ -26,7 +28,7 @@ public class ProcesoUsuario {
         int resultado =0;
         try{
             Statement smtm = _cn.createStatement();
-            String queryId = "SELECT id FROM Persona WHERE correo='"+correo+"'";
+            String queryId = "SELECT id FROM persona WHERE correo='"+correo+"'";
             int personaId = 0;
             
             ResultSet result = smtm.executeQuery(queryId);
@@ -34,7 +36,7 @@ public class ProcesoUsuario {
                 personaId = result.getInt("id");
             }
             
-            String query = "INSERT INTO Usuario(usuario,password,id_persona)";
+            String query = "INSERT INTO usuario(usuario,password,id_persona)";
             query += "VALUES ('"+usuario.getUsername()+"','"+usuario.getPassword()+"',"+personaId+")";
             
             resultado = smtm.executeUpdate(query);
@@ -44,6 +46,7 @@ public class ProcesoUsuario {
         }
         catch(Exception e){
             int x = 1;
+            out.println(e);
         }
         return resultado;
     }

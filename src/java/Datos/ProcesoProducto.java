@@ -33,10 +33,10 @@ public class ProcesoProducto {
             ResultSet result = stmt.executeQuery(query);
             while(result.next()){
                 Producto productos = new Producto();
-                productos.setNombre(result.getString("name_producto"));
+                productos.setNombre(result.getString("nombre"));
                 productos.setFoto(result.getString("imagen"));
                 productos.setPrecio(result.getFloat("precio"));
-                productos.setId(result.getInt("id_producto"));
+                productos.setId(result.getInt("id"));
                 
                 producto.add(productos);
             }
