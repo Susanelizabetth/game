@@ -11,9 +11,7 @@ Para hacer cambios en la base de datos y crear nuevos proceso y tablas o hacer c
 
 - Descargar Mariadb:  https://downloads.mariadb.org/
 - Descargar Heidi: https://www.heidisql.com/download.php
-- Iniciar al Server con:
-    - Host: database-1.cdrf6m4wg1wx.us-west-2.rds.amazonaws.com
-    - Login: 'admin'
-    - Password: abcd1234
+- Descargar archivo gameplusdb.sql e correrlo en tu mariadb
+- Cambiar en /Datos/Conexion.java linea 20: localhost, user, password
 
 
