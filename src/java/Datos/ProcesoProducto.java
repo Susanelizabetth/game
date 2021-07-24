@@ -51,5 +51,55 @@ public class ProcesoProducto {
         }
         return null;
     }
+    
+    public int GuardarProducto(Producto producto) {
+        int resultado = 0;
+        try {
+            Statement stmt = _cn.createStatement();
+            String query = "Call InsertarProducto('" + producto.getNombre() + "','" + producto.getFoto() + "','" + producto.getPrecio()+"')";
 
+            resultado = stmt.executeUpdate(query);
+            stmt.close();
+
+            return resultado;
+        } catch (Exception e) {
+            int x = 1;
+        }
+
+        return resultado;
+    }
+
+    public int UpdateProducto(Producto producto){
+        int resultado = 0;
+        try{
+            Statement stmt = _cn.createStatement();
+            String query = "Call UpdateProducto('"+producto.getId()+"','"+producto.getNombre()+"','"+producto.getPrecio()+"','"+producto.getFoto()+"')";
+            
+            resultado = stmt.executeUpdate(query);
+            stmt.close();
+            
+            return resultado;
+        }
+        catch(Exception e){
+            int x = 1;
+        }
+        
+        return resultado;
+    }
+    
+    public int DeleteProducto(int pid) {
+        try {
+            Statement stmt = _cn.createStatement();
+            String query = "CALL DeleteProducto('" + pid + "')";
+
+            return stmt.executeUpdate(query);
+        } catch (Exception e) {
+            int x = 1;
+        }
+        return 0;
+    }
 }
+
+
+
+
