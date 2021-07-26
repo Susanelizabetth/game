@@ -49,25 +49,31 @@
         </fieldset><br>
    
     </div>
-    <h2>No messirve? Describenos tu problema </h2>
+    <form action="process/ProcesoComen.jsp">
+    <h2>Ayúdanos a mejorar</h2>
     <div class="CajaMadre">
-    
+        
         <fieldset class="Caja2">
-            <legend><b>Describe tu problemática.</b></legend>
             
-            <input type="text" class="Tema" placeholder="Tema" maxlength="10" size="10">
+            <legend><b>Dejanos tu retroalimentación</b></legend>
+            
+            <input type="text" name="tema" class="Tema" placeholder="Tema" maxlength="10" size="10">
         <br><br>
-            <textarea class="comentarios" rows="10" cols="40" placeholder="Escribe aquí tus comentarios"></textarea>
+            <textarea class="comentarios" name="comentario" rows="10" cols="40" placeholder="Escribe aquí tus comentarios"></textarea>
+            <input class="boton_1"type="submit" >
         </fieldset>
-        </div>
+            
+          
+    </div>
+    </form>
     <h2>Sucursales</h2>
     
     <div class="CajaMapa">
         
         <div class="cajabuscar"><form method="get" id="buscarform">
-            <form >
+                <form>
                 <input type="search" class="search-data" placeholder="Search" required>
-                <button type="submit" class="fas fa-search"></button>
+                <button type="submit"></button>
             </form>
         </form></div>
         <br>
