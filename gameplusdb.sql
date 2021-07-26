@@ -1,8 +1,8 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Server version:               10.6.3-MariaDB - mariadb.org binary distribution
--- Server OS:                    Win64
--- HeidiSQL Version:             11.3.0.6295
+-- Versión del servidor:         10.6.3-MariaDB - mariadb.org binary distribution
+-- SO del servidor:              Win64
+-- HeidiSQL Versión:             11.3.0.6295
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -13,11 +13,24 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Dumping database structure for gameplus
+-- Volcando estructura de base de datos para gameplus
 CREATE DATABASE IF NOT EXISTS `gameplus` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `gameplus`;
 
--- Dumping structure for procedure gameplus.DeleteProducto
+-- Volcando estructura para tabla gameplus.comentarios
+CREATE TABLE IF NOT EXISTS `comentarios` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `Tema` varchar(100) NOT NULL,
+  `Comentario` varchar(1500) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+-- Volcando datos para la tabla gameplus.comentarios: ~0 rows (aproximadamente)
+/*!40000 ALTER TABLE `comentarios` DISABLE KEYS */;
+/*!40000 ALTER TABLE `comentarios` ENABLE KEYS */;
+
+-- Volcando estructura para procedimiento gameplus.DeleteProducto
 DELIMITER //
 CREATE PROCEDURE `DeleteProducto`(
 	IN `pid` INT
@@ -28,7 +41,19 @@ BEGIN
 END//
 DELIMITER ;
 
--- Dumping structure for procedure gameplus.InsertarProducto
+-- Volcando estructura para procedimiento gameplus.InsertarComentario
+DELIMITER //
+CREATE PROCEDURE `InsertarComentario`(
+	IN `Comentario` VARCHAR(1500),
+	IN `Tema` VARCHAR(150)
+)
+BEGIN
+INSERT INTO comentarios(Comentario,Tema)
+	VALUES (Comentario,Tema);
+END//
+DELIMITER ;
+
+-- Volcando estructura para procedimiento gameplus.InsertarProducto
 DELIMITER //
 CREATE PROCEDURE `InsertarProducto`(
 	IN `n` VARCHAR(50),
@@ -41,7 +66,7 @@ BEGIN
 END//
 DELIMITER ;
 
--- Dumping structure for procedure gameplus.ObtenerProductos
+-- Volcando estructura para procedimiento gameplus.ObtenerProductos
 DELIMITER //
 CREATE PROCEDURE `ObtenerProductos`()
 BEGIN
@@ -49,7 +74,7 @@ BEGIN
 END//
 DELIMITER ;
 
--- Dumping structure for table gameplus.persona
+-- Volcando estructura para tabla gameplus.persona
 CREATE TABLE IF NOT EXISTS `persona` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(50) NOT NULL,
@@ -61,13 +86,22 @@ CREATE TABLE IF NOT EXISTS `persona` (
   PRIMARY KEY (`id`,`correo`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
--- Dumping data for table gameplus.persona: ~0 rows (approximately)
+-- Volcando datos para la tabla gameplus.persona: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `persona` DISABLE KEYS */;
 INSERT INTO `persona` (`id`, `nombre`, `apellido`, `correo`, `ciudad`, `cel`, `fechaNac`) VALUES
 	(20, 'roger', 'rodriguex', 'roregerr@gmail.com', 'Brazil', '6325520', '1999-06-17');
 /*!40000 ALTER TABLE `persona` ENABLE KEYS */;
 
--- Dumping structure for table gameplus.producto
+-- Volcando estructura para tabla gameplus.problemas
+CREATE TABLE IF NOT EXISTS `problemas` (
+  `Columna 1` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Volcando datos para la tabla gameplus.problemas: ~0 rows (aproximadamente)
+/*!40000 ALTER TABLE `problemas` DISABLE KEYS */;
+/*!40000 ALTER TABLE `problemas` ENABLE KEYS */;
+
+-- Volcando estructura para tabla gameplus.producto
 CREATE TABLE IF NOT EXISTS `producto` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(50) NOT NULL,
@@ -76,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `producto` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
--- Dumping data for table gameplus.producto: ~6 rows (approximately)
+-- Volcando datos para la tabla gameplus.producto: ~5 rows (aproximadamente)
 /*!40000 ALTER TABLE `producto` DISABLE KEYS */;
 INSERT INTO `producto` (`id`, `nombre`, `imagen`, `precio`) VALUES
 	(2, 'AmongUS', 'https://cdn2.unrealengine.com/egs-amongusallinonepack-innersloth-editions-g1a-00-1920x1080-e896d5a6f18c.jpg\r\n', 1.99),
@@ -86,7 +120,7 @@ INSERT INTO `producto` (`id`, `nombre`, `imagen`, `precio`) VALUES
 	(6, 'Bloodborne\r\n', 'https://image.api.playstation.com/vulcan/img/rnd/202010/2614/NVmnBXze9ElHzU6SmykrJLIV.png\r\n', 8.99);
 /*!40000 ALTER TABLE `producto` ENABLE KEYS */;
 
--- Dumping structure for procedure gameplus.UpdateProducto
+-- Volcando estructura para procedimiento gameplus.UpdateProducto
 DELIMITER //
 CREATE PROCEDURE `UpdateProducto`(
 	IN `pid` INT,
@@ -103,7 +137,7 @@ BEGIN
 END//
 DELIMITER ;
 
--- Dumping structure for table gameplus.usuario
+-- Volcando estructura para tabla gameplus.usuario
 CREATE TABLE IF NOT EXISTS `usuario` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `usuario` varchar(50) NOT NULL DEFAULT '',
@@ -114,13 +148,13 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   CONSTRAINT `FK_usuario_persona` FOREIGN KEY (`id_persona`) REFERENCES `persona` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
--- Dumping data for table gameplus.usuario: ~0 rows (approximately)
+-- Volcando datos para la tabla gameplus.usuario: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
 INSERT INTO `usuario` (`id`, `usuario`, `password`, `id_persona`) VALUES
 	(1, 'roregerr', '51516556', 20);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 
--- Dumping structure for procedure gameplus.ValidarUser
+-- Volcando estructura para procedimiento gameplus.ValidarUser
 DELIMITER //
 CREATE PROCEDURE `ValidarUser`(
 	IN `u` VARCHAR(50),
