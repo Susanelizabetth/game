@@ -37,6 +37,10 @@ public class ProcesoProducto {
                 productos.setFoto(result.getString("imagen"));
                 productos.setPrecio(result.getFloat("precio"));
                 productos.setId(result.getInt("id"));
+                productos.setDescripcion(result.getString("descripcion"));
+                productos.setPublicador(result.getString("publicador"));
+                productos.setDesarollador(result.getString("desarollador"));
+                productos.setPlataforma(result.getString("plataforma"));
                 
                 producto.add(productos);
             }
@@ -99,7 +103,6 @@ public class ProcesoProducto {
         return 0;
     }
 }
-
 
 
 
