@@ -1,8 +1,9 @@
 <%-- 
     Document   : iniciar.jsp
-    Created on : 07/20/2021, 12:54:54 a. m.
+    Created on : 07/20/2021, 12:54:54 a.Â m.
     Author     : susan
 --%>
+
 
 <%@page import="Entidades.Persona"%>
 <%@page import="Datos.ProcesoUsuario"%>
@@ -20,21 +21,26 @@
         
         Persona persona = usuarioDb.ValidarLoginUsuario(usuario);
         
+         
+           
+       
+        
         if (persona != null) {
-            session.setAttribute("ui", persona.getId());
+            session.setAttribute("ui", persona.getId());  
             session.setAttribute("n", persona.getNombre());
             session.setAttribute("a", persona.getApellido());
             session.setAttribute("c", persona.getCorreo());
-            
+            session.setAttribute("ut", persona.getType_p());
             session.setAttribute("error", 0);
-            response.sendRedirect("../index.jsp");
+            response.sendRedirect("../loginType.jsp");
         }else{
             session.setAttribute("error", 1);
-            response.sendRedirect("../InicioSesion.jsp");
+            
         }
 
     }
     catch(Exception e){
+        
         session.setAttribute("error", 1);
         response.sendRedirect("../InicioSesion.jsp");
     }
