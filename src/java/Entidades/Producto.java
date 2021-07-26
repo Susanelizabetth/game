@@ -12,6 +12,20 @@ package Entidades;
 public class Producto {
 
     /**
+     * @return the Plataforma
+     */
+    public String getPlataforma() {
+        return Plataforma;
+    }
+
+    /**
+     * @param Plataforma the Plataforma to set
+     */
+    public void setPlataforma(String Plataforma) {
+        this.Plataforma = Plataforma;
+    }
+
+    /**
      * @return the Id
      */
     public int getId() {
@@ -70,4 +84,51 @@ public class Producto {
     private String Nombre;
     private Float Precio;
     private String Foto;
+    private String Descripcion;
+    private String Publicador;
+    private String Desarollador;
+    private String Plataforma;
+
+    /**
+     * @return the Descripcion
+     */
+    public String getDescripcion() {
+        return Descripcion;
+    }
+
+    /**
+     * @param Descripcion the Descripcion to set
+     */
+    public void setDescripcion(String Descripcion) {
+        this.Descripcion = Descripcion;
+    }
+
+    /**
+     * @return the Publicador
+     */
+    public String getPublicador() {
+        return Publicador;
+    }
+
+    /**
+     * @param Publicador the Publicador to set
+     */
+    public void setPublicador(String Publicador) {
+        this.Publicador = Publicador;
+    }
+
+    /**
+     * @return the Desarollador
+     */
+    public String getDesarollador() {
+        return Desarollador;
+    }
+
+    /**
+     * @param Desarollador the Desarollador to set
+     */
+    public void setDesarollador(String Desarollador) {
+        this.Desarollador = Desarollador;
+    }
+    
 }
