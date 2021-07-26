@@ -1,6 +1,6 @@
 <%-- 
     Document   : Busqueda
-    Created on : 07/08/2021, 5:23:36 p. m.
+    Created on : 07/08/2021, 5:23:36 p.Â m.
     Author     : susan
 --%>
 
@@ -42,7 +42,7 @@
          <div class="row-b">
             <% for(Producto producto : productos){ %>
             <div class="col">
-               <a href="Re-1.html"><img src="<%= producto.getFoto() %>" alt=""></a>
+               <a href="viewProduct.jsp?pid=<%= producto.getId()%>"><img src="<%= producto.getFoto() %>" alt=""></a>
                <h4><%= producto.getNombre() %></h4>
                <div class="rating">
                   <i class="fas fa-star"></i>
