@@ -156,6 +156,21 @@ padding-left: 1em;
     color: black;
 
 }
+    
+ .boton_1{
+        text-decoration: none;
+        padding: 3px;
+        font-family: helvetica;
+        font-size: 15px;
+        color: #ffffff;
+        background-color: #5d6dd7;
+        border-radius: 5px;
+      }
+      .boton_1:hover{
+        background-color:rgb(83, 135, 195);
+        text-decoration: none;
+      }
+
     .CajaMadre .Caja2{
         width: 50%;
         color: black;   
@@ -169,6 +184,7 @@ padding-left: 1em;
         resize: none;
         border-radius: 5px; 
         border-color: rgba(206, 206, 206, 0.513);   
+        
     }
     .CajaMadre .comentarios:hover{
         border-color: rgba(155, 155, 155, 0.513);   
@@ -215,8 +231,8 @@ padding-left: 1em;
     display: inline-block;
     text-align: left;
 }
-
-.Margen form{
+/*
+.Margen .form{
     
     left: 1100px;
     display:flex;
@@ -227,7 +243,7 @@ padding-left: 1em;
     border-radius: 2px;
     border: 1px solid #5d6edb32;
   }
-.Margen form .search-data{
+.Margen .form .search-data{
     width: 100%;
     height: 100%;
     padding: 0 10px;
@@ -237,7 +253,7 @@ padding-left: 1em;
     font-weight: 500;
     background: none;
   }
-.Margen form button{
+.Margen .form button{
     padding: 0 15px;
     color: rgb(248, 240, 240);
     font-size: 17px;
@@ -246,10 +262,11 @@ padding-left: 1em;
     border-radius: 2px;
     cursor: pointer;
   }
-.Margen form button:hover{
+.Margen .form button:hover{
     background: #73BA74;}
+   
 .CajaMapa #buscarform fieldset { width: 100% }
-
+ */
 .CajaMapa #s {
     width: 100%;
     background-color: #f7f7f7;
