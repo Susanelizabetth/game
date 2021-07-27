@@ -102,6 +102,93 @@ public class ProcesoProducto {
         }
         return 0;
     }
+    public List<Producto> GetAventura(){
+        try{
+            Statement stmt = _cn.createStatement();
+            String query = "Call BusquedaAventura()";
+            
+            List<Producto> producto = new ArrayList<>();
+            
+            ResultSet result = stmt.executeQuery(query);
+            while(result.next()){
+                Producto productos = new Producto();
+                productos.setNombre(result.getString("nombre"));
+                productos.setFoto(result.getString("imagen"));
+                productos.setPrecio(result.getFloat("precio"));
+                productos.setId(result.getInt("id"));
+                
+                producto.add(productos);
+            }
+            
+            result.close();
+            stmt.close();
+            
+            return producto;
+        }
+        catch(Exception e){
+            int x = 5;
+        }
+        return null;
+    }
+    
+    public List<Producto> GetSimula(){
+        try{
+            Statement stmt = _cn.createStatement();
+            String query = "Call BusquedaSimulacion()";
+            
+            List<Producto> producto = new ArrayList<>();
+            
+            ResultSet result = stmt.executeQuery(query);
+            while(result.next()){
+                Producto productos = new Producto();
+                productos.setNombre(result.getString("nombre"));
+                productos.setFoto(result.getString("imagen"));
+                productos.setPrecio(result.getFloat("precio"));
+                productos.setId(result.getInt("id"));
+                
+                producto.add(productos);
+            }
+            
+            result.close();
+            stmt.close();
+            
+            return producto;
+        }
+        catch(Exception e){
+            int x = 5;
+        }
+        return null;
+    }
+    
+    public List<Producto> GetDisparos(){
+        try{
+            Statement stmt = _cn.createStatement();
+            String query = "Call BusquedaDisparos()";
+            
+            List<Producto> producto = new ArrayList<>();
+            
+            ResultSet result = stmt.executeQuery(query);
+            while(result.next()){
+                Producto productos = new Producto();
+                productos.setNombre(result.getString("nombre"));
+                productos.setFoto(result.getString("imagen"));
+                productos.setPrecio(result.getFloat("precio"));
+                productos.setId(result.getInt("id"));
+                
+                producto.add(productos);
+            }
+            
+            result.close();
+            stmt.close();
+            
+            return producto;
+        }
+        catch(Exception e){
+            int x = 5;
+        }
+        return null;
+    } 
+     
 }
 
 
