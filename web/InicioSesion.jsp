@@ -1,7 +1,7 @@
 <%-- 
-    Document   : InicioSesion
-    Created on : 07/01/2021, 10:48:07 p. m.
-    Author     : susan
+    Document   : AAAAAAAAAA
+    Created on : 26 jul. 2021, 15:31:39
+    Author     : Usuario
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -11,60 +11,39 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/InicioSesion.css" type="text/css">
-        <%@ include file="nav.jsp" %>
         
-         <div class="login-page">
-     
-            <div class="form">
-                
-                <img class="logo-login" id="img" src="https://i.ibb.co/6wxDKhH/Whats-App-Image-2021-05-21-at-10-42-35-AM.jpg" alt="">
-                
-                <p id="p1">+ Únete y descubre más titulos a los que jugar.</p>
-                <p id="p2">+ Ofertas y juegos exclusivos que te harán reír de la competencia</p>
-                
-                <h1>Inicio de Sesión</h1>
-                <form action="process/iniciar.jsp" method="post" class="login-form">
-                    <input type="text" name="username" placeholder="Nombre de Usuario"/>
-                    <input type="password" name="password" placeholder="contaseña"/>
-                    <button type="submit">Iniciar Sesión</button>
-                    <p class="message"><a href="#">Has olvidado tu contraseña?</a></p>
-                    <p class="message">Aun no posees una cuenta? <a href="#">Registrate</a></p>
-                </form>
-            </div>
-
-            <div class="sign-in-social-media">
-                <div class="google-sign-in-button">
-                    <div class="content-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg">
-                        </div>
-                        <span class="text-container">
-                            <span>Inicia sesión con google</span>
-                        </span>
-                    </div>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <title>Animated Login Form</title>
+        <link rel="stylesheet" href="css/InicioSesion.css" type="text/css" media=screen>
+    </head>
+    <body>
+        <div class="center">
+            <img class="logo-login" id="img" src="image/logo.png" alt="">
+            <p id="p1">+ Únete y descubre más titulos a los que jugar.</p>
+            <p id="p2">+ Ofertas y juegos exclusivos que te harán reír de la competencia</p>
+            <H1>Login</H1>
+            <form method="post" action="process/iniciar.jsp" >
+                <div class="txt_field">
+                    <input name="username" type="text" required>
+                    <span></span>
+                    <label>Username</label>
                 </div>
-                <div class="facebook-sign-in-button">
-                    <div class="content-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png">
-                        </div>
-                        <span class="text-container">
-                            <span>Inicia sesión con faceb</span>
-                        </span>
-                    </div>
+                <div class="txt_field">
+                    <input name="password" type="password" required>
+                    <span></span>
+                    <label>contraseña?</label>
                 </div>
-                <div class="instagram-sign-in-button">
-                    <div class="content-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg">
-                        </div>
-                        <span class="text-container">
-                            <span>Inicia sesión con insta</span>
-                        </span>
-                    </div>
+                <div class="pass">Olvidaste tu contraseña?</div>
+                <input type="submit" value="Login">
+                <div class="signup_link">
+                    Aun no eres miembro? <a href="#">Registrate</a>
                 </div>
-            </div>
+            </form>
         </div>
-    
-<%@ include file="footer.jsp"  %>
+    </body>
+</html>
