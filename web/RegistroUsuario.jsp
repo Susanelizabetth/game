@@ -28,6 +28,13 @@
                 <input type="text" name="username" id="username" placeholder="username" required>
                 <input type="email" name="email" id="email" placeholder="email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
                 <input type="password" name="password" id="password" placeholder="password" required>
+                <div class="tipo-user">
+                    <p>tipo de usuario</p>
+                    <select name="tipo" id="tipo" placeholder="tipo de usuario" required>
+                        <option value="0">Consumidor</option>
+                        <option value="1">Vendedor</option>     
+                    </select> 
+                </div>
                 <div class="div-city">
                     <p>ciudad</p>
                     <select name="city" id="city" placeholder="city" required>
