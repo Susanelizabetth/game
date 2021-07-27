@@ -1,6 +1,6 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Server version:               10.6.3-MariaDB - mariadb.org binary distribution
+-- Server version:               10.3.7-MariaDB - mariadb.org binary distribution
 -- Server OS:                    Win64
 -- HeidiSQL Version:             11.3.0.6295
 -- --------------------------------------------------------
@@ -88,12 +88,15 @@ CREATE TABLE IF NOT EXISTS `persona` (
   `cel` varchar(50) NOT NULL,
   `fechaNac` date NOT NULL,
   PRIMARY KEY (`id`,`correo`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
 
--- Dumping data for table gameplus.persona: ~0 rows (approximately)
+-- Dumping data for table gameplus.persona: ~4 rows (approximately)
 /*!40000 ALTER TABLE `persona` DISABLE KEYS */;
 INSERT INTO `persona` (`id`, `nombre`, `apellido`, `correo`, `ciudad`, `cel`, `fechaNac`) VALUES
-	(20, 'roger', 'rodriguex', 'roregerr@gmail.com', 'Brazil', '6325520', '1999-06-17');
+	(20, 'roger', 'rodriguex', 'roregerr@gmail.com', 'Brazil', '6325520', '1999-06-17'),
+	(21, 'raul', 'm', 'Ra16Mp@gmail.com', 'Panama', '65555555', '1998-09-16'),
+	(22, 'raul', 'm', 'Ra916Mp@gmail.com', 'Panama', '655555555', '1998-09-16'),
+	(23, 'louis', 'brad', 'lousi88@gmail.com', 'Ecuador', '6744444', '2000-04-17');
 /*!40000 ALTER TABLE `persona` ENABLE KEYS */;
 
 -- Dumping structure for table gameplus.producto
@@ -102,21 +105,18 @@ CREATE TABLE IF NOT EXISTS `producto` (
   `nombre` varchar(50) NOT NULL,
   `imagen` varchar(200) NOT NULL,
   `precio` float NOT NULL,
-  `descripcion` varchar(1500) DEFAULT NULL,
-  `publicador` varchar(75) DEFAULT NULL,
-  `desarollador` varchar(75) DEFAULT NULL,
-  `plataforma` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
--- Dumping data for table gameplus.producto: ~5 rows (approximately)
+-- Dumping data for table gameplus.producto: ~6 rows (approximately)
 /*!40000 ALTER TABLE `producto` DISABLE KEYS */;
-INSERT INTO `producto` (`id`, `nombre`, `imagen`, `precio`, `descripcion`, `publicador`, `desarollador`, `plataforma`) VALUES
-	(2, 'AmongUS', 'https://www.cnet.com/a/img/bjDrQODueOs6eImEgobi_773lZM=/940x0/2020/10/21/9f706d3a-dc30-4937-8195-47aa345288e5/promofinal.jpg', 1.99, '                                   Es un videojuego de género party y multijugador en línea desarrollado por la compañía estadounidense InnerSloth y distribuido entre junio y noviembre de 2018 para las plataformas Android, iOS y PC. El 15 de diciembre de 2020 se anunció su disponibilidad en Nintendo Switch, mientras que su adaptación a las consolas Xbox One y Xbox Series X|S se confirmó para 2021. Posteriormente se anunció su lanzamiento para PlayStation 4 y PlayStation 5 con unos skins exclusivos. La trama del juego trata sobre un grupo de tripulantes a bordo de una nave espacial que deben supervisar el adecuado funcionamiento del vehículo, al mismo tiempo que investigan a los «impostores» que intentan sabotear la nave y asesinarlos durante cada partida.\r\n                                ', 'InnerSloth', 'InnerSloth', 'PC (fisico)'),
-	(3, 'Days Gone\r\n', 'https://s3.gaming-cdn.com/images/products/6791/orig/days-gone-cover.jpg\r\n', 0.25, 'Days Gone es un juego de aventura, acción y mundo abierto que transcurre en tierras salvajes y hostiles dos años después de una devastadora pandemia mundial. Conviértete en Deacon St. John, un cazarrecompensas que recorre los caminos destrozados y lucha brutalmente para sobrevivir y encontrar la razón de su existencia.', 'SIE Sony Interactive Entretainment', 'Bend Studio', 'PS5'),
-	(4, 'Fortnite\r\n', 'https://image.api.playstation.com/vulcan/img/rnd/202106/0806/7KJILbdp9AEmmrELwJCMJqc2.png\r\n', 0, 'Fortnite es el juego multijugador completamente gratuito en el que tus amigos y tú colaboraréis para crear un mundo de ensueño o lucharéis para ser los últimos en pie. Juega a Battle Royale y al modo Creativo GRATIS. Descárgalo ya y lánzate a la acción.', 'Epic Games', 'Epic Games', 'PC (digital)'),
-	(5, 'Call of Duty: Modern Warefare\r\n\r\n', 'https://image.api.playstation.com/cdn/UP0002/CUSA03522_00/t7SHaSjuUXFZ3VHl6U4FuSFrDMtkOIyP.png', 0.05, 'Call of Duty  es una serie de videojuegos de disparos en primera persona, de estilo bélico, desarrollada principal e inicialmente por Infinity Ward, Treyarch, Sledgehammer Games y en menor proporción Raven Software y distribuida por Activision. La franquicia comenzó para computadora personal y posteriormente fue expandiéndose hacia videoconsolas de sexta y séptima generación, tanto de sobremesa como portátiles, llegando así, a lanzar varios juegos derivados de forma paulatina con la serie principal.', 'Activision', 'RavenSoft', 'PS5'),
-	(6, 'Bloodborne\r\n', 'https://image.api.playstation.com/vulcan/img/rnd/202010/2614/NVmnBXze9ElHzU6SmykrJLIV.png\r\n', 8.99, 'Bloodborne es un videojuego de rol de acción dirigido por Hidetaka Miyazaki, desarrollado por From Software y JapanStudio distribuido por Sony Computer Entertainment para la plataforma de PlayStation 4 El videojuego sigue las acciones del personaje del jugador, el Cazador, a traves de Yharnam, una ciudad ficticia de estilo victoriano, cuyos habitantes han sido afectados con una enfermedad de transmision sanguinea anormal. ', 'Sony Computer Entretainment', 'From Software', 'PS4');
+INSERT INTO `producto` (`id`, `nombre`, `imagen`, `precio`) VALUES
+	(1, 'Minecraft\r\n', 'https://image.api.playstation.com/vulcan/img/cfn/11307uYG0CXzRuA9aryByTHYrQLFz-HVQ3VVl7aAysxK15HMpqjkAIcC_R5vdfZt52hAXQNHoYhSuoSq_46_MT_tDBcLu49I.png', 2.99),
+	(2, 'AmongUS', 'https://cdn2.unrealengine.com/egs-amongusallinonepack-innersloth-editions-g1a-00-1920x1080-e896d5a6f18c.jpg\r\n', 1.99),
+	(3, 'Days Gone\r\n', 'https://s3.gaming-cdn.com/images/products/6791/orig/days-gone-cover.jpg\r\n', 0.25),
+	(4, 'Fortnite\r\n', 'https://image.api.playstation.com/vulcan/img/rnd/202106/0806/7KJILbdp9AEmmrELwJCMJqc2.png\r\n', 0),
+	(5, 'Call of duty\r\n', 'https://image.api.playstation.com/cdn/UP0002/CUSA03522_00/t7SHaSjuUXFZ3VHl6U4FuSFrDMtkOIyP.png', 0.05),
+	(6, 'Bloodborne\r\n', 'https://image.api.playstation.com/vulcan/img/rnd/202010/2614/NVmnBXze9ElHzU6SmykrJLIV.png\r\n', 8.99);
 /*!40000 ALTER TABLE `producto` ENABLE KEYS */;
 
 -- Dumping structure for procedure gameplus.UpdateProducto
@@ -150,16 +150,18 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `usuario` varchar(50) NOT NULL DEFAULT '',
   `password` varchar(50) NOT NULL DEFAULT '',
   `id_persona` int(11) NOT NULL,
-  `type_user` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_usuario_persona` (`id_persona`),
   CONSTRAINT `FK_usuario_persona` FOREIGN KEY (`id_persona`) REFERENCES `persona` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
--- Dumping data for table gameplus.usuario: ~0 rows (approximately)
+-- Dumping data for table gameplus.usuario: ~4 rows (approximately)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` (`id`, `usuario`, `password`, `id_persona`, `type_user`) VALUES
-	(1, 'roregerr', '51516556', 20, 1);
+INSERT INTO `usuario` (`id`, `usuario`, `password`, `id_persona`) VALUES
+	(1, 'roregerr', '51516556', 20),
+	(2, 'ramp16', '252525', 21),
+	(3, 'ramp16', '161616', 22),
+	(4, 'louis88', '1234567', 23);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 
 -- Dumping structure for procedure gameplus.ValidarUser
@@ -174,8 +176,8 @@ SELECT
 		persona.nombre,
 		persona.apellido,
 		persona.correo,
-		usuario.usuario,
-		usuario.type_user
+		persona.ciudad,
+		usuario.usuario
 	FROM persona
 	INNER JOIN usuario ON usuario.id_persona = persona.id
 	WHERE usuario.usuario = u AND usuario.password = p;
