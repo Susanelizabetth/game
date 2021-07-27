@@ -276,11 +276,11 @@ border-color: #ed5565;
   grid-column: 1/3;
 }
 
-.div-city{
-  grid-row: 7;
-  grid-column: 1/3;
-  margin: 0 10px 10px;
-  display: block;
+.div-city {
+    grid-row: 7;
+    grid-column: 2;
+    margin: 0 10px 10px;
+    display: block;
 }
 
 .div-city p{
@@ -289,11 +289,28 @@ border-color: #ed5565;
   margin: 0;
 }
 
+.tipo-user {
+    grid-row: 7;
+    margin: 0 10px 10px;
+    display: block;
+}
+
+.tipo-user p{
+  font-size: smaller;
+  color: gray;
+  margin: 0;
+}
+
+#city{
+  width: 100%;
+  background-color: transparent;
+  border-width: 0 0 2px 0;
+}
 
 #name, #lastname{
   grid-row: 1;
 }
-#city{
+#tipo{
   width: 100%;
   background-color: transparent;
   border-width: 0 0 2px 0;

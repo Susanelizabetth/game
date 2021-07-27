@@ -1,18 +1,20 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
 }
-.cart-view{
-    display: flex;
-    flex-flow: row wrap;
+.cart-view {
+    /* display: flex; */
+    flex-flow: row;
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    width: 200vh;
-    height: 68vh
+    /* width: 200vh; */
+    /* height: 68vh; */
 }
 
-.cart-view h1{
-    width: 37em;
+.cart-view h1 {
+    width: 15em;
+    margin: 9px 67px;
+    font-size: xxx-large;
 }
 
 .elementos{
@@ -96,4 +98,8 @@
     background-color: azure;
     color: #6e50ff;
     border:1px solid #6e50ff
+}
+
+.total-car, .opcions {
+    padding: 0 16px;
 }
