@@ -27,7 +27,7 @@
             <p id="p1">+ Únete y descubre más titulos a los que jugar.</p>
             <p id="p2">+ Ofertas y juegos exclusivos que te harán reír de la competencia</p>
             <H1>Login</H1>
-            <form method="post" action="loginType.jsp" >
+            <form method="post" action="process/iniciar.jsp" >
                 <div class="txt_field">
                     <input name="username" type="text" required>
                     <span></span>

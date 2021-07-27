@@ -67,7 +67,9 @@ public class ProcesoUsuario {
                 return persona;
             }
         }
-        catch(Exception e){}
+        catch(Exception e){
+            int x = 0;
+        }
         return null;
     }
     

@@ -27,7 +27,7 @@
             session.setAttribute("c", persona.getCorreo());
             session.setAttribute("ciu", persona.getCiudad());
             session.setAttribute("un", usuario.getUsername());
-            session.setAttribute("ut", persona.getType_p());
+            //session.setAttribute("ut", persona.getType_p());
             
             session.setAttribute("error", 0);
             response.sendRedirect("../index.jsp");
