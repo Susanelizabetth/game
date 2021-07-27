@@ -13,15 +13,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="css/Perfil.css" type="text/css">
-</head><!-- comment -->
+</head>
 <body>
-    <%//@ include file="nav.jsp"  %> 
+    
     <div class="main-content">
     <!-- Top navbar -->
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
         <div class="container-fluid">
             <!-- Brand -->
-            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="https://www.creative-tim.com/product/argon-dashboard" target="_blank">Perfil de Usuario</a>
+            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="" target="_blank">Perfil de Usuario</a>
             <!-- Form -->
             <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
                 <div class="form-group mb-0">
@@ -39,7 +39,7 @@
                 <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="media align-items-center">
                     <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="https://inculture.microsoft.com/uploads/prod/2021/03/whm-letta-03.jpg"> <!---->
+                    <img alt="Image placeholder" src="https://icon-library.com/images/person-profile-icon/person-profile-icon-15.jpg"> <!---->
                     </span>
                     <div class="media-body ml-2 d-none d-lg-block">
                     <span class="mb-0 text-sm  font-weight-bold"><%= session.getAttribute("n") %> <%= session.getAttribute("a") %></span>
@@ -100,7 +100,7 @@
                 <div class="col-lg-3 order-lg-2">
                     <div class="card-profile-image">
                     <a href="#">
-                        <img alt="" src="https://inculture.microsoft.com/uploads/prod/2021/03/whm-letta-03.jpg" class="rounded-circle"> <!---->
+                        <img alt="" src="https://icon-library.com/images/person-profile-icon/person-profile-icon-15.jpg" class="rounded-circle"> <!---->
                     </a>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
                 <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
                 
                 </div>
-                <div class="card-body pt-0 pt-md-4">
+                <div class="card-body pt-1 pt-md-4">
                 <div class="row">
                     <div class="col">
                     <div class="card-profile-stats d-flex justify-content-center mt-md-5">
@@ -129,10 +129,10 @@
                 </div>
                 <div class="text-center">
                     <h3>
-                    <%= session.getAttribute("n") %> <%= session.getAttribute("a") %> <span class="font-weight-light">, 27</span>
+                    <%= session.getAttribute("n") %> <%= session.getAttribute("a") %> <span class="font-weight-light"></span>
                     </h3>
                     <div class="h5 font-weight-300">
-                    <em class="ni location_pin mr-2"></i>Panama, <%= session.getAttribute("a") %> 
+                    <em class="ni location_pin mr-2"></i>Panama, <%= session.getAttribute("ciu") %> 
                     </div>
                     <div class="h5 mt-4">
                     <em class="ni business_briefcase-24 mr-2"></i>Software Engineering - Web Developement Enthusiast
@@ -141,7 +141,7 @@
                     <em class="ni education_hat mr-2"></i>University of Computer Science
                     </div>
                     <hr class="my-4">
-                    <p>Mollis senectus fermentum libero condimentum scelerisque aptent fames per donec commodo et, cubilia ultrices egestas non blandit torquent quisque tincidunt id sollicitudin, laoreet quis nisi malesuada a integer enim primis sem tellus. .</p>
+                    <!--<p>Mollis senectus fermentum libero condimentum scelerisque aptent fames per donec commodo et, cubilia ultrices egestas non blandit torquent quisque tincidunt id sollicitudin, laoreet quis nisi malesuada a integer enim primis sem tellus. .</p>-->
                     <a href="#">Mostrar Más</a>
                 </div>
                 </div>
@@ -151,8 +151,9 @@
             <div class="card bg-secondary shadow">
                 <div class="card-header bg-white border-0">
                 <div class="row align-items-center">
-                    <div class="col-8">
+                    <div class="col-8 ">
                     <h3 class="mb-0">Mi cuenta</h3>
+                    <a href="#!" class="btn btn-info">Guardar cambios</a>
                     </div>
                     <div class="col-4 text-right">
                     
@@ -191,7 +192,6 @@
                         </div>
                         </div>
                         
-                        <a href="#!" class="btn btn-info">Guardar cambios</a>
                         
                     </div>
                     </div>
@@ -226,6 +226,5 @@
         </div>
         </div>
     </div>
-    </body>
+  </body>
 </html>
-<%//@ include file="footer.jsp"  %>
