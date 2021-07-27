@@ -63,11 +63,25 @@ public class ProcesoUsuario {
                 persona.setApellido(result.getString("apellido"));
                 persona.setCorreo(result.getString("correo"));
                 persona.setId(result.getInt("id"));
-                
+                persona.setCiudad(result.getString("ciudad"));
                 return persona;
             }
         }
         catch(Exception e){}
         return null;
+    }
+    
+    public int UpdateUsuario(Usuario usuario){
+        int resultado = 0;
+        try{
+            Statement stmt = _cn.createStatement();
+            String query = " Call UpdateUsuario('"+usuario.getUsername()+"','"+usuario.getPassword()+"')";
+        
+            resultado = stmt.executeUpdate(query);
+            stmt.close();
+        }catch(Exception e){
+            int x = 1;
+        }
+        return resultado;
     }
 }
