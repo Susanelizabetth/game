@@ -9,6 +9,8 @@ import Entidades.Carrito;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -24,12 +26,12 @@ public class ProcesoCarrito {
     public int GuardarProductoCarrito(Carrito carrito){
          try{
             Statement stmt = _cn.createStatement();
-            String query = "Call InsertarACarrito('"+carrito.getProductoId()+"','"+carrito.getPersonaId()+"','"+carrito.getCantidad()+"')";
+            String query = "Call InsertarACarrito('"+carrito.getProductoId()+"','"+carrito.getCantidad()+"','"+carrito.getPersonaId()+"')";
             
             int res = 0;
             stmt.executeUpdate(query);
             
-            ResultSet result = stmt.executeQuery("Call CantidadProductosCarrito('"+carrito.getPersonaId()+"')");
+            ResultSet result = stmt.executeQuery("Call TotalProductosCarrito('"+carrito.getPersonaId()+"')");
             while(result.next()){
                 res = result.getInt("total");
             }
@@ -42,6 +44,33 @@ public class ProcesoCarrito {
             int cx = 3;
         }
         return 0;
+    }
+    
+     public List<Carrito> ObtenerProductosCarrito(int pid){
+        try{
+            Statement stmt = _cn.createStatement();
+            String query ="Call ObtenerProductosCarrito('"+pid+"')";
+            
+            List<Carrito> carritos = new ArrayList<>();
+            
+            ResultSet result = stmt.executeQuery(query);
+            while(result.next()){
+                Carrito carrito = new Carrito();
+                carrito.setCarritoId(result.getInt("carritoId"));
+                carrito.setProductoId(result.getInt("productoId"));
+                carrito.setFotoProducto(result.getString("foto"));
+                carrito.setNombreProducto(result.getString("nombreProducto"));
+                carrito.setCantidad(result.getInt("cantidad"));
+                carrito.setPrecioProducto(result.getFloat("precio"));
+                
+                carritos.add(carrito);
+            }
+            return carritos;
+        }
+        catch(Exception e){
+            int x = 1;
+        }
+        return null;
     }
     
 }
