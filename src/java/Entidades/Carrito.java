@@ -12,6 +12,20 @@ package Entidades;
 public class Carrito {
 
     /**
+     * @return the Categoria
+     */
+    public String getCategoria() {
+        return Categoria;
+    }
+
+    /**
+     * @param Categoria the Categoria to set
+     */
+    public void setCategoria(String Categoria) {
+        this.Categoria = Categoria;
+    }
+
+    /**
      * @return the PersonaId
      */
     public int getPersonaId() {
@@ -109,7 +123,6 @@ public class Carrito {
         this.PrecioProducto = PrecioProducto;
     }
     
-    
     private int ProductoId;
     private int Cantidad;
     private String NombreProducto;
@@ -117,4 +130,5 @@ public class Carrito {
     private int CarritoId;
     private float PrecioProducto;
     private int PersonaId;
+    private String Categoria;
 }
