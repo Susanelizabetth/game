@@ -58,11 +58,15 @@ DELIMITER //
 CREATE PROCEDURE `InsertarProducto`(
 	IN `n` VARCHAR(50),
 	IN `img` VARCHAR(150),
-	IN `pr` DOUBLE
+	IN `pr` DOUBLE,
+	IN `dev` VARCHAR(150),
+	IN `ds` VARCHAR(3000),
+	IN `plat` VARCHAR(150),
+	IN `pub` VARCHAR(150)
 )
 BEGIN
-	INSERT INTO producto (nombre,imagen,precio)
-	VALUES (n,img,pr);
+	INSERT INTO producto (nombre,imagen,precio,desarollador,descripcion,plataforma,publicador)
+	VALUES (n,img,pr,dev,ds,plat,pub);
 END//
 DELIMITER ;
 
@@ -103,12 +107,12 @@ CREATE TABLE IF NOT EXISTS `producto` (
   `desarollador` varchar(75) DEFAULT NULL,
   `plataforma` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table gameplus.producto: ~5 rows (approximately)
 /*!40000 ALTER TABLE `producto` DISABLE KEYS */;
 INSERT INTO `producto` (`id`, `nombre`, `imagen`, `precio`, `descripcion`, `publicador`, `desarollador`, `plataforma`) VALUES
-	(2, 'AmongUS', 'https://www.cnet.com/a/img/bjDrQODueOs6eImEgobi_773lZM=/940x0/2020/10/21/9f706d3a-dc30-4937-8195-47aa345288e5/promofinal.jpg', 1.99, 'Es un videojuego de género party y multijugador en línea desarrollado por la compañía estadounidense InnerSloth y distribuido entre junio y noviembre de 2018 para las plataformas Android, iOS y PC. El 15 de diciembre de 2020 se anunció su disponibilidad en Nintendo Switch, mientras que su adaptación a las consolas Xbox One y Xbox Series X|S se confirmó para 2021. Posteriormente se anunció su lanzamiento para PlayStation 4 y PlayStation 5 con unos skins exclusivos. La trama del juego trata sobre un grupo de tripulantes a bordo de una nave espacial que deben supervisar el adecuado funcionamiento del vehículo, al mismo tiempo que investigan a los «impostores» que intentan sabotear la nave y asesinarlos durante cada partida.', 'InnerSloth', 'InnerSloth', 'PC (digital)'),
+	(2, 'AmongUS', 'https://www.cnet.com/a/img/bjDrQODueOs6eImEgobi_773lZM=/940x0/2020/10/21/9f706d3a-dc30-4937-8195-47aa345288e5/promofinal.jpg', 1.99, '                                   Es un videojuego de género party y multijugador en línea desarrollado por la compañía estadounidense InnerSloth y distribuido entre junio y noviembre de 2018 para las plataformas Android, iOS y PC. El 15 de diciembre de 2020 se anunció su disponibilidad en Nintendo Switch, mientras que su adaptación a las consolas Xbox One y Xbox Series X|S se confirmó para 2021. Posteriormente se anunció su lanzamiento para PlayStation 4 y PlayStation 5 con unos skins exclusivos. La trama del juego trata sobre un grupo de tripulantes a bordo de una nave espacial que deben supervisar el adecuado funcionamiento del vehículo, al mismo tiempo que investigan a los «impostores» que intentan sabotear la nave y asesinarlos durante cada partida.\r\n                                ', 'InnerSloth', 'InnerSloth', 'PC (fisico)'),
 	(3, 'Days Gone\r\n', 'https://s3.gaming-cdn.com/images/products/6791/orig/days-gone-cover.jpg\r\n', 0.25, 'Days Gone es un juego de aventura, acción y mundo abierto que transcurre en tierras salvajes y hostiles dos años después de una devastadora pandemia mundial. Conviértete en Deacon St. John, un cazarrecompensas que recorre los caminos destrozados y lucha brutalmente para sobrevivir y encontrar la razón de su existencia.', 'SIE Sony Interactive Entretainment', 'Bend Studio', 'PS5'),
 	(4, 'Fortnite\r\n', 'https://image.api.playstation.com/vulcan/img/rnd/202106/0806/7KJILbdp9AEmmrELwJCMJqc2.png\r\n', 0, 'Fortnite es el juego multijugador completamente gratuito en el que tus amigos y tú colaboraréis para crear un mundo de ensueño o lucharéis para ser los últimos en pie. Juega a Battle Royale y al modo Creativo GRATIS. Descárgalo ya y lánzate a la acción.', 'Epic Games', 'Epic Games', 'PC (digital)'),
 	(5, 'Call of Duty: Modern Warefare\r\n\r\n', 'https://image.api.playstation.com/cdn/UP0002/CUSA03522_00/t7SHaSjuUXFZ3VHl6U4FuSFrDMtkOIyP.png', 0.05, 'Call of Duty  es una serie de videojuegos de disparos en primera persona, de estilo bélico, desarrollada principal e inicialmente por Infinity Ward, Treyarch, Sledgehammer Games y en menor proporción Raven Software y distribuida por Activision. La franquicia comenzó para computadora personal y posteriormente fue expandiéndose hacia videoconsolas de sexta y séptima generación, tanto de sobremesa como portátiles, llegando así, a lanzar varios juegos derivados de forma paulatina con la serie principal.', 'Activision', 'RavenSoft', 'PS5'),
@@ -121,13 +125,21 @@ CREATE PROCEDURE `UpdateProducto`(
 	IN `pid` INT,
 	IN `n` VARCHAR(50),
 	IN `p` DOUBLE,
-	IN `ft` VARCHAR(150)
+	IN `ft` VARCHAR(150),
+	IN `ds` VARCHAR(3000),
+	IN `pub` VARCHAR(150),
+	IN `dev` VARCHAR(150),
+	IN `plat` VARCHAR(150)
 )
 BEGIN
 	UPDATE producto p SET 
 	p.nombre = n,
 	p.precio = p,
-	p.imagen= ft
+	p.imagen= ft,
+	p.descripcion = ds,
+	p.publicador = pub,
+	p.desarollador = dev,
+	p.plataforma = plat
 	WHERE p.id = pid;
 END//
 DELIMITER ;
