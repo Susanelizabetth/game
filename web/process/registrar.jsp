@@ -1,6 +1,6 @@
 <%-- 
     Document   : registrar
-    Created on : 07/19/2021, 11:13:54 p. m.
+    Created on : 07/19/2021, 11:13:54 p.Â m.
     Author     : susan
 --%>
 <%@page import="Entidades.Usuario"%>
@@ -17,6 +17,7 @@
         String ciudad = request.getParameter("city");
         String user = request.getParameter("username");
         String password = request.getParameter("password");
+        int tipousuario = Integer.parseInt(request.getParameter("tipo"));
        
 
         ProcesoPersona personasDb = new ProcesoPersona();
