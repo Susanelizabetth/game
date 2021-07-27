@@ -27,8 +27,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <%@ include file="nav.jsp" %>
-    </head>
-    <body>
+  
         <%
             int pid  = Integer.parseInt(request.getParameter("pid"));
             ProcesoProducto productosDb = new ProcesoProducto();
@@ -64,6 +63,24 @@
                                 <label>Precio</label>
                                 <input type="text" class="form-control" name="precioEdit" value="<%=selectedProducto.getPrecio()%>"required>
                             </div>
+                             <div class="form-group">
+                                <label>Plataforma</label>
+                                <input type="text" class="form-control" name="plataformaEdit" value="<%=selectedProducto.getPlataforma()%>"required>
+                            </div>
+                            <div class="form-group">
+                                <label>Descripción</label>
+                                <textarea name="descripcionEdit" class="form-control" requiered>
+                                   <%=selectedProducto.getDescripcion()%>
+                                </textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Desarollador</label>
+                                <input type="text" class="form-control" name="desarolladorEdit" value="<%=selectedProducto.getDesarollador()%>"required>
+                            </div>
+                            <div class="form-group">
+                                <label>Publicador</label>
+                                <input type="text" class="form-control" name="publicadorEdit" value="<%=selectedProducto.getPublicador()%>"required>
+                            </div>
                             <div class="modal-footer">
                                  <input type="hidden" name="pid" value="<%= selectedProducto.getId() %>" />
                                 <input type="submit"  class="btn btn-success" value="Guardar">
@@ -75,6 +92,5 @@
         </div>
     </div> 
  
-</body>
+
 <%@ include file="footer.jsp"  %>
-</html>
