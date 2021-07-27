@@ -12,6 +12,10 @@
     String nombre = request.getParameter("nombreEdit");
     float precio = Float.parseFloat(request.getParameter("precioEdit"));
     String foto = request.getParameter("fotoEdit");
+    String Descripcion = request.getParameter("descripcionEdit");
+    String Publicador = request.getParameter("publicadorEdit");
+    String Desarollador = request.getParameter("desarolladorEdit");
+    String Plataforma = request.getParameter("plataformaEdit");
     int pid = Integer.parseInt(request.getParameter("pid"));
     
     Producto producto = new Producto();
@@ -19,6 +23,10 @@
     producto.setPrecio(precio);
     producto.setFoto(foto);
     producto.setId(pid);
+    producto.setDescripcion(Descripcion);
+    producto.setPublicador(Publicador);
+    producto.setDesarollador(Desarollador);
+    producto.setPlataforma(Plataforma);
     
     ProcesoProducto productoDB = new ProcesoProducto();
     int resultado = productoDB.UpdateProducto(producto);
