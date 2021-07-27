@@ -13,13 +13,10 @@
 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>CRUD</title>
-        <link rel="stylesheet" href="css/style.css" type="text/css">
-
         <link rel="stylesheet" href="css/CRUD.css">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -27,18 +24,11 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <%@ include file="nav.jsp" %>
-    </head>
-    <body>
+    
         <%
             ProcesoProducto productosDb = new ProcesoProducto();
             List<Producto> productos = productosDb.GetAllProductos();
 
-            /*Producto selectedProducto = new Producto();
-       for(Producto p : productos){
-           if(p.getId() == pid){
-               selectedProducto = p;
-           }
-       }*/
         %>
         <div class="container">
             <div class="table-wrapper">
@@ -49,7 +39,6 @@
                         </div>
                         <div class="col-sm-6">
                             <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Añadir Juego</span></a>
-                            <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Eliminar</span></a>
                         </div>
                     </div>
                 </div>
@@ -119,6 +108,23 @@
                                 <label>Precio</label>
                                 <input type="text" class="form-control" required name="precio">
                             </div>
+                            <div class="form-group">
+                                <label>Plataforma</label>
+                                <input type="text" class="form-control" name="plataforma" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Descripción</label>
+                                <textarea name="descripcion" class="form-control" requiered>
+                                </textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Desarollador</label>
+                                <input type="text" class="form-control" name="desarollador" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Publicador</label>
+                                <input type="text" class="form-control" name="publicador" required>
+                            </div>
 
                         </div>
                         <div class="modal-footer">
@@ -132,6 +138,5 @@
         <!-- Edit Modal HTML -->
       
 
-</body>
 <%@ include file="footer.jsp"  %>
-</html>
+
