@@ -14,68 +14,11 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="css/Perfil.css" type="text/css">
 </head>
+    <%@ include file="nav.jsp" %>
 <body>
     
     <div class="main-content">
     <!-- Top navbar -->
-    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
-        <div class="container-fluid">
-            <!-- Brand -->
-            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="" target="_blank">Perfil de Usuario</a>
-            <!-- Form -->
-            <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
-                <div class="form-group mb-0">
-                    <div class="input-group input-group-alternative">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><em class="fas fa-search"></i></span>
-                    </div>
-                    <input class="form-control" placeholder="Search" type="text">
-                    </div>
-                </div>
-            </form>
-            <!-- User -->
-            <ul class="navbar-nav align-items-center d-none d-md-flex">
-            <li class="nav-item dropdown">
-                <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <div class="media align-items-center">
-                    <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="https://icon-library.com/images/person-profile-icon/person-profile-icon-15.jpg"> <!---->
-                    </span>
-                    <div class="media-body ml-2 d-none d-lg-block">
-                    <span class="mb-0 text-sm  font-weight-bold"><%= session.getAttribute("n") %> <%= session.getAttribute("a") %></span>
-                    </div>
-                </div>
-                </a>
-                <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
-                <div class=" dropdown-header noti-title">
-                    <h6 class="text-overflow m-0">Welcome!</h6>
-                </div>
-                <a href="../examples/profile.html" class="dropdown-item">
-                    <em class="ni ni-single-02"></i>
-                    <span>My profile</span>
-                </a>
-                <a href="../examples/profile.html" class="dropdown-item">
-                    <em class="ni ni-settings-gear-65"></i>
-                    <span>Settings</span>
-                </a>
-                <a href="../examples/profile.html" class="dropdown-item">
-                    <em class="ni ni-calendar-grid-58"></i>
-                    <span>Activity</span>
-                </a>
-                <a href="../examples/profile.html" class="dropdown-item">
-                    <em class="ni ni-support-16"></i>
-                    <span>Support</span>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="#!" class="dropdown-item">
-                    <em class="ni ni-user-run"></i>
-                    <span>Logout</span>
-                </a>
-                </div>
-            </li>
-            </ul>
-        </div>
-        </nav>
         <!-- Header  pb-8 pt-5 pt-lg-8 d-flex align-items-center-->
         <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Vaporwave-4K-Wallpapers.jpg/800px-Vaporwave-4K-Wallpapers.jpg); background-size: cover; background-position: center top;">
         <!-- Mask -->
@@ -86,7 +29,7 @@
             <div class="col-lg-7 col-md-10">
                 <h1 class="display-2 text-white">Hola <%= session.getAttribute("un") %></h1>
                 <p class="text-white mt-0 mb-5">Esta es tu pagina de perfil. Aqui podras observar y editar toda tu informacion de usuario Lorem ipsum dolor sit amet consectetur adipiscing, elit blandit integer nunc habitant dictumst, arcu maecenas mus praesent commodo</p>
-                <a href="#!" class="btn btn-info">Editar perfil</a>
+                <a href="index.jsp" class="btn btn-info">ir atrás</a>
             </div>
             </div>
         </div>
@@ -132,17 +75,16 @@
                     <%= session.getAttribute("n") %> <%= session.getAttribute("a") %> <span class="font-weight-light"></span>
                     </h3>
                     <div class="h5 font-weight-300">
-                    <em class="ni location_pin mr-2"></i>Panama, <%= session.getAttribute("ciu") %> 
+                    <em class="ni location_pin mr-2"></i><%= session.getAttribute("ciu") %> 
                     </div>
                     <div class="h5 mt-4">
-                    <em class="ni business_briefcase-24 mr-2"></i>Software Engineering - Web Developement Enthusiast
+                    
                     </div>
                     <div>
-                    <em class="ni education_hat mr-2"></i>University of Computer Science
+                    <em class="ni education_hat mr-2" style= "font-weight: 800;"></i>UTP
                     </div>
                     <hr class="my-4">
-                    <!--<p>Mollis senectus fermentum libero condimentum scelerisque aptent fames per donec commodo et, cubilia ultrices egestas non blandit torquent quisque tincidunt id sollicitudin, laoreet quis nisi malesuada a integer enim primis sem tellus. .</p>-->
-                    <a href="#">Mostrar Más</a>
+                   
                 </div>
                 </div>
             </div>
