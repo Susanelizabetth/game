@@ -4,7 +4,11 @@
     Author     : susan
 --%>
 
-
+<% 
+    if (session.getAttribute("error") == null) {
+            session.setAttribute("error", 0); 
+     }
+%>
 
 <!---------------------------------Links de nav y foot------------------------------ -->
     <link rel="stylesheet" href="css/only-foot.css" type="text/css">
@@ -31,12 +35,26 @@
                 <a href="index.jsp"><img src="image/logo.png"></a>
             </div>
             <div class="nav-items">
+                <% 
+                            if(session.getAttribute("ui") == null){
+                %>
                 <li><a href="index.jsp">Inicio</a></li>
                 <li><a href="Busqueda.jsp">Juegos</a></li>
                 <li><a href="AcercaProyecto.jsp">Conócenos</a></li>
                 <li><a href="contacto.jsp">Contactos</a></li>
                 <li><a href="RegistroUsuario.jsp">Regístrate</a></li>
                 <li><a href="InicioSesion.jsp">Inicia Sesión</a></li>
+            </div>
+            <form >
+                <input type="search" class="search-data" placeholder="Search" required>
+                <button type="submit" class="fas fa-search"></button>
+            </form>
+                <%}else{%>
+                <li><a href="index.jsp">Inicio</a></li>
+                <li><a href="Busqueda.jsp">Juegos</a></li>
+                <li><a href="AcercaProyecto.jsp">Conócenos</a></li>
+                <li><a href="contacto.jsp">Contactos</a></li>
+                <li><a href="Cerrar.jsp">Cerrar Sesión</a></li>
             </div>
             <form >
                 <input type="search" class="search-data" placeholder="Search" required>
@@ -85,5 +103,6 @@
                 
                 <button><a href="cart-view.jsp"><i class="fas fa-cart-plus"></i></a></button>
             </div>
+            <%}%>
     </nav>
 <!-- --------------------------------------------------------TERMINA NAV-------------------------------------------------- -->
