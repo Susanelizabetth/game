@@ -44,13 +44,6 @@
             <div class="col">
                <a href="viewProduct.jsp?pid=<%= producto.getId()%>"><img src="<%= producto.getFoto() %>" alt=""></a>
                <h4><%= producto.getNombre() %></h4>
-               <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-               </div>
                <p>$<%= producto.getPrecio() %></p>
                <a href="cart-view.html"><button>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewbox="0 0 16 16">
