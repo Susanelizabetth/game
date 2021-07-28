@@ -1,6 +1,6 @@
 <%-- 
     Document   : nav
-    Created on : 07/01/2021, 10:01:37 p.爉.
+    Created on : 07/01/2021, 10:01:37 p.聽m.
     Author     : susan
 --%>
 
@@ -13,6 +13,7 @@
 <!---------------------------------Links de nav y foot------------------------------ -->
     <link rel="stylesheet" href="css/only-foot.css" type="text/css">
     <link rel="stylesheet" href="css/new-var-style.css" type="text/css">
+    <script scr="/jScrips/carrito.js" ></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <title>Game+</title>
     <!-- ------------------------------SCRIPT DEL BOTON DE NOTIFICACIONES------------------------------ -->
@@ -40,10 +41,10 @@
                 %>
                 <li><a href="index.jsp">Inicio</a></li>
                 <li><a href="Busqueda.jsp">Juegos</a></li>
-                <li><a href="AcercaProyecto.jsp">Con骳enos</a></li>
+                <li><a href="AcercaProyecto.jsp">Con贸cenos</a></li>
                 <li><a href="contacto.jsp">Contactos</a></li>
-                <li><a href="RegistroUsuario.jsp">Reg韘trate</a></li>
-                <li><a href="InicioSesion.jsp">Inicia Sesi髇</a></li>
+                <li><a href="RegistroUsuario.jsp">Reg铆strate</a></li>
+                <li><a href="InicioSesion.jsp">Inicia Sesi贸n</a></li>
             </div>
             <form >
                 <input type="search" class="search-data" placeholder="Search" required>
@@ -52,9 +53,9 @@
                 <%}else{%>
                 <li><a href="index.jsp">Inicio</a></li>
                 <li><a href="Busqueda.jsp">Juegos</a></li>
-                <li><a href="AcercaProyecto.jsp">Con骳enos</a></li>
+                <li><a href="AcercaProyecto.jsp">Con贸cenos</a></li>
                 <li><a href="contacto.jsp">Contactos</a></li>
-                <li><a href="Cerrar.jsp">Cerrar Sesi髇</a></li>
+                <li><a href="Cerrar.jsp">Cerrar Sesi贸n</a></li>
             </div>
             <form >
                 <input type="search" class="search-data" placeholder="Search" required>
@@ -101,7 +102,7 @@
                     </div>
                 </div>
                 
-                <button><a href="cart-view.jsp"><i class="fas fa-cart-plus"></i></a></button>
+                <button><a href="cart-view.jsp" class="counter-p"><p class="counter" id="contador">0</p><i class="fas fa-cart-plus"></i></a></button>
             </div>
             <%}%>
     </nav>
