@@ -28,7 +28,7 @@
     <!-- ----------------------------------------------------NAV---------------------------------------------- -->
     <nav>    
         <div class="logo">
-                <a href="PaginaPrincipal.html"><img src="image/logo.png"></a>
+                <a href="index.jsp"><img src="image/logo.png"></a>
             </div>
             <div class="nav-items">
                 <li><a href="index.jsp">Inicio</a></li>

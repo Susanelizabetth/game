@@ -12,6 +12,20 @@ package Entidades;
 public class Usuario {
 
     /**
+     * @return the Type_p
+     */
+    public int getType_p() {
+        return Type_p;
+    }
+
+    /**
+     * @param Type_p the Type_p to set
+     */
+    public void setType_p(int Type_p) {
+        this.Type_p = Type_p;
+    }
+
+    /**
      * @return the Id
      */
     public int getId() {
@@ -55,4 +69,5 @@ public class Usuario {
     private int Id;
     private String Username;
     private String Password;
+    private int Type_p;
 }

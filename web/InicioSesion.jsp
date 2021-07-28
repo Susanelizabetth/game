@@ -41,7 +41,7 @@
                 <div class="pass">Olvidaste tu contraseña?</div>
                 <input type="submit" value="Login">
                 <div class="signup_link">
-                    Aun no eres miembro? <a href="#">Registrate</a>
+                    Aun no eres miembro? <a href="RegistroUsuario.jsp">Registrate</a>
                 </div>
             </form>
         </div>

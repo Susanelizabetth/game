@@ -36,8 +36,8 @@ public class ProcesoUsuario {
                 personaId = result.getInt("id");
             }
             
-            String query = "INSERT INTO usuario(usuario,password,id_persona)";
-            query += "VALUES ('"+usuario.getUsername()+"','"+usuario.getPassword()+"',"+personaId+")";
+            String query = "INSERT INTO usuario(usuario,password,id_persona,type_user )";
+            query += "VALUES ('"+usuario.getUsername()+"','"+usuario.getPassword()+"','"+personaId+"','"+usuario.getType_p()+"')";
             
             resultado = smtm.executeUpdate(query);
             smtm.close();
@@ -64,6 +64,7 @@ public class ProcesoUsuario {
                 persona.setCorreo(result.getString("correo"));
                 persona.setId(result.getInt("id"));
                 persona.setCiudad(result.getString("ciudad"));
+                usuario.setType_p(result.getInt("type_user"));
                 return persona;
             }
         }

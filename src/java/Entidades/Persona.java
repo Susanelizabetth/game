@@ -11,20 +11,7 @@ package Entidades;
  */
 public class Persona {
 
-    /**
-     * @return the Type_p
-     */
-    public int getType_p() {
-        return Type_p;
-    }
-
-    /**
-     * @param Type_p the Type_p to set
-     */
-    public void setType_p(int Type_p) {
-        this.Type_p = Type_p;
-    }
-
+   
     /**
      * @return the Ciudad
      */
@@ -130,5 +117,5 @@ public class Persona {
     private String Telefono;
     private String FechaNacimiento;
     private String Ciudad;
-    private int Type_p;
+    
 }

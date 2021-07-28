@@ -24,8 +24,8 @@ public class ProcesoPersona {
         try{
             
             Statement smtm = _cn.createStatement();
-            String query = "INSERT INTO Persona(nombre,apellido,correo,ciudad,cel,fechaNac,user_type)";
-            query += "VALUES('"+persona.getNombre()+"','"+persona.getApellido()+"','"+persona.getCorreo()+"','"+persona.getCiudad()+"','"+persona.getTelefono()+"','"+persona.getFechaNacimiento()+"','"+persona.getType_p()+"')";
+            String query = "INSERT INTO persona(nombre,apellido,correo,ciudad,cel,fechaNac)";
+            query += "VALUES('"+persona.getNombre()+"','"+persona.getApellido()+"','"+persona.getCorreo()+"','"+persona.getCiudad()+"','"+persona.getTelefono()+"','"+persona.getFechaNacimiento()+"')";
         
             resultado = smtm.executeUpdate(query);
             smtm.close();
@@ -33,8 +33,7 @@ public class ProcesoPersona {
             return resultado;
         }
         catch(Exception e){
-            int x = 0;
-        }
+        int y = 2;}
         
         return resultado;
     }    
@@ -43,18 +42,22 @@ public class ProcesoPersona {
         int resultado = 0;
         try{
             Statement stmt = _cn.createStatement();
-            String query = "Call UpdatePersona('"+persona.getId()+"','"+persona.getNombre()+"','"+persona.getApellido()+"','"+persona.getCorreo()+"','"+persona.getTelefono()+"','"+persona.getFechaNacimiento()+"','"+persona.getCiudad()+"')";
-            
+            String query = " Call UpdatePersona('"+persona.getNombre()+"','"+persona.getApellido()+"','"+persona.getCorreo()+"','"+persona.getCiudad()+"')";
+        
             resultado = stmt.executeUpdate(query);
             stmt.close();
-            
-            return resultado;
-        }
-        catch(Exception e){
+        }catch(Exception e){
             int x = 1;
         }
-        
         return resultado;
     }
-    
 }
+
+
+
+
+
+
+
+
+

@@ -29,9 +29,9 @@
       <div class="sidebar">
          <a class="active1" href="">Juegos</a>
          <a class="active" href="#home">Populares</a>
-         <a href="BDisparos.html">Disparos</a>
-         <a href="BAventura.html">Aventura</a>
-         <a href="BSimula.html">Simuladores</a>
+         <a href="BDisparos.jsp">Disparos</a>
+         <a href="BAventura.jsp">Aventura</a>
+         <a href="BSimula.jsp">Simuladores</a>
       </div>
 
       <!---BUSQUEDA---->

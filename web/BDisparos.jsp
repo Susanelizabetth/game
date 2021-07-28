@@ -31,8 +31,8 @@
       %>
       
       <div class="sidebar">
-         <a class="active1" href="">Juegos</a>
-         <a href="#home">Populares</a>
+         <a class="active1" href="Busqueda.jsp">Juegos</a>
+         <a href="Busqueda.jsp">Populares</a>
          <a class="active" href="BDisparos.jsp">Disparos</a>
          <a href="BAventura.jsp">Aventura</a>
          <a href="BSimula.jsp">Simuladores</a>
@@ -42,11 +42,11 @@
     
    
       <div class="container-b">
-         <h4 class="title">Juegos Populares</h4>
+         <h4 class="title">Juegos de Disparos</h4>
          <div class="row-b">
             <% for(Producto producto : productos){ %>
             <div class="col">
-               <a href="Re-1.html"><img src="<%= producto.getFoto() %>" alt=""></a>
+               <a href="viewProduct.jsp?pid=<%= producto.getId()%>"><img src="<%= producto.getFoto() %>" alt=""></a>
                <h4><%= producto.getNombre() %></h4>
                <p>$<%= producto.getPrecio() %></p>
                <a href="cart-view.html"><button>

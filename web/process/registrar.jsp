@@ -31,10 +31,11 @@
         persona.setTelefono(telefono);
         persona.setCiudad(ciudad);
 
+
         Usuario usuario = new Usuario();
         usuario.setUsername(user);
         usuario.setPassword(password);
-
+        usuario.setType_p(tipousuario);
         int savedPerson = personasDb.RegistrarPersona(persona);
         if (savedPerson > 0) {
             int savedUser = usuariosDb.GuardarUsuario(usuario, email);

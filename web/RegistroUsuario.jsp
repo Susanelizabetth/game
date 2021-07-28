@@ -53,7 +53,7 @@
                 </div>
             </form>
             <div class="cuenta-ya" style="display: flex;">
-                <p>Si ya posees una cuenta</p><a href="InicioSesion.html">INICIA SESIÓN</a>
+                <p>Si ya posees una cuenta</p><a href="InicioSesion.jsp">INICIA SESIÓN</a>
             </div>
         </div>
     </div>

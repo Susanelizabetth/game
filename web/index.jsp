@@ -16,6 +16,7 @@
         <%@ include file="nav.jsp" %>
         
     <div style="display:flex; justify-content: space-evenly">
+ 
         <div class="gi">
             <h2>De gamers para gamers</h2>
             <div class="carousel">

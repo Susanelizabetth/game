@@ -5,10 +5,13 @@
 --%>
 
 <%
-     int u_type = (int)session.getAttribute("ut");
+       int id = 0;
+    if(session.getAttribute("ut") != null){
+        id = (int)session.getAttribute("ut");
+    } 
    
     
-    if (u_type >= 1) {
+    if (id >= 1) {
         response.sendRedirect("CRUD.jsp");
     }
     else{
